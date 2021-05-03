@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Clouset • Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="shortcut icon" href="src/Icon.png"/>
+</head>
+<body style="background-color: #ffdfcb;" background="src/FondoPantallaEstrellas.png">
+    <nav class="navbar navbar-expand-lg navbar-clouset">
+        <div class="container-fluid">
+            <img src="src/IconNavbar.png" width="3%" height="3%" alt="Clouset Icon">
+            <a class="navbar-brand" href="index.html"><h1>Clouset</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page">Mi armario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item-clouset" href="#">Desarrollados</a></li>
+                            <li><a class="dropdown-item-clouset" href="#">En desarrollo</a></li>
+                            <li><hr class="dropdown-divider-clouset"></li>
+                            <li><a class="dropdown-item-clouset" href="#">Próximamente</a></li>
+                        </ul>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Marcas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Foro de Usuarios(Próximamente)</a>
+                </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="¡Encuentralo ahora!" aria-label="Search">
+                    <button class="btn btn-simple" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="background-color: #f8c6a7; width: 50%; margin-top: 10%; border-style: solid; border-width:1%; border-radius: 10%; border-color:#7b360a;">
+        <div class="text-center">
+            <h2 style="margin-top:3%; margin-bottom:3%; color: #7b360a;" ><strong>Iniciar sesión</strong></h2>
+        </div>
+        <div class="row justify-content-md-center" style="height: 100%; width: 100%; margin-top: 2%;">
+          <form>
+            <h5 style="color: #7b360a;"><strong>Introduce tu usuario</strong></h5>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@test.com">
+                <label for="floatingInputInvalid">Invalid input</label>
+            </div>
+            <h5 style="color: #7b360a;"><strong>Una contraseña</strong></h5>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Recordar contraseña</label>
+            </div>
+            <div class="text-center" style="margin-top: 3%; margin-bottom: 3%;">
+                <button type="submit" class="btn btn-solido" style="width: 80%;">Iniciar</button>
+            </div>
+            <div class="text-center" style="margin-top:6%; margin-bottom: 5%;">
+                <h5 style="color: #7b360a;"><strong>¿Aún no tienes cuenta en Clouset?</strong></h5>
+                <h6 style="color: #7b360a;">Create una ahora y ponte al día de las prendas de tus amigos</h6>
+                <a class="btn btn-simple" href="register.html" role="button" style="width: 80%; margin-top:2%; margin-bottom: 5%;">Registarse ahora</a>
+            </div>
+          </form>
+        </div>
+    </div>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
