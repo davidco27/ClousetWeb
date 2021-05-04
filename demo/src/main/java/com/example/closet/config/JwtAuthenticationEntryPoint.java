@@ -1,4 +1,4 @@
-package info.jab.microservices.config;
+package com.example.closet.config;
 
 import java.io.IOException;
 import java.io.Serializable;

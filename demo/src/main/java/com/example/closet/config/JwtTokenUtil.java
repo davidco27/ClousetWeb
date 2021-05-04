@@ -1,4 +1,4 @@
-package info.jab.microservices.config;
+package com.example.closet.config;
 
 import java.io.Serializable;
 import java.util.Date;

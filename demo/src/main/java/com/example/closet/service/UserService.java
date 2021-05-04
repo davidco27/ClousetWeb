@@ -18,7 +18,7 @@ public class UserService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
+   @Autowired
     private UserRepository repository;
 
 
@@ -35,12 +35,13 @@ public class UserService implements UserDetailsService {
                 List.of((GrantedAuthority) () -> "USER"));
     }
     public void registerUser(Usuario user) {
-        repository.save(user);
+        repository.saveUser(user.getUsername(),user.getEmail(),user.getPassword());
     }
     public boolean userExists(String username){
         return repository.getUserByUserName(username) != null;
     }
     public boolean emailExists(String email){
+
         return repository.getUserByEmail(email) != null;
     }
 

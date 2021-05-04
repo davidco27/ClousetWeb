@@ -9,6 +9,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class RegisterRequest {
 
         @NonNull
@@ -18,7 +20,6 @@ public class RegisterRequest {
 
         @NonNull
         @NotEmpty
-        @Pattern(message="max 10 words please" , regexp="^[a-zA-Z-.0-9]{1,15}$")
         private String email;
 
         @NotNull

@@ -1,4 +1,4 @@
-package info.jab.microservices.config;
+package com.example.closet.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -55,10 +55,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.csrf().disable()
 				.authorizeRequests()
 				.antMatchers("/",
-						"/index.html", "/home.html", "/out.html","/change-password.html",
+						"/register.html", "/home.html", "/login.html","/change-password.html",
 						"/images/**",
 						"/js/**").permitAll()
-				.antMatchers("/api/login").permitAll()
+				.antMatchers("/api/login","/api/register").permitAll()
 				.and()
 				.authorizeRequests()
 				.antMatchers("/h2/**").permitAll()
