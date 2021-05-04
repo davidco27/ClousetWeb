@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc89fed6-7b67-45ae-906a-485dbee268a3" name="Default Changelist" comment="hola">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/model/JwtRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/model/JwtResponse.java" afterDir="false" />
+    <list default="true" id="cc89fed6-7b67-45ae-906a-485dbee268a3" name="Default Changelist" comment="Html clouset login/register/index v2">
+      <change afterPath="$PROJECT_DIR$/demo/src/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/loginView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/registerView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/controller/RestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/controller/RestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/model/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/model/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/ClousetApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/ClousetApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/test/java/com/example/closet/ClousetApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,44 +25,11 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ClousetWeb" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="ClousetWeb" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -84,31 +46,22 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RunManager">
-    <configuration name="ClousetApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ClousetApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.closet.ClousetApplication" />
       <module name="spring-boot-security-challenge-classroom" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.closet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ClousetApplication" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.closet.ClousetApplication" />
+      <module name="spring-boot-security-challenge-classroom" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -126,28 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620034995020</updated>
     </task>
-    <task id="LOCAL-00002" summary="hola">
-      <created>1620036704334</created>
+    <task id="LOCAL-00002" summary="Html clouset login/register/index">
+      <created>1620035148969</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1620036704334</updated>
+      <updated>1620035148969</updated>
     </task>
-    <task id="LOCAL-00003" summary="hola">
-      <created>1620051810298</created>
+    <task id="LOCAL-00003" summary="Html clouset login/register/index">
+      <created>1620035317678</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1620051810298</updated>
+      <updated>1620035317678</updated>
     </task>
-    <task id="LOCAL-00004" summary="hola">
-      <created>1620051823912</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1620051823912</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,49 +110,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Html clouset login/register/index" />
-    <MESSAGE value="hola" />
-    <option name="LAST_COMMIT_MESSAGE" value="hola" />
+    <option name="LAST_COMMIT_MESSAGE" value="Html clouset login/register/index" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620036437025">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1620036437025" />
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1620036434699">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1620036434699" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1620119617432">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620119617432" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1620125487917">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620125487917" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1620125487917">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620125487917" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1620125487916">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620125487916" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1620125487917">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620125487917" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1620036672803">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620036672803" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1620036707538">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620036707538" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620035846703">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1620035846703" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
