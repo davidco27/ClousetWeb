@@ -16,13 +16,23 @@ public class ArmarioService {
     private ArmarioRepository armarioRepository;
 
     public List<Prenda> getPrendasByUser(String userId) {
-        // Devuleve todas las prendas del armario de un usuario
+        // Devuelve todas las prendas del armario de un usuario
         return armarioRepository.getPrendasByUser(userId);
     }
 
+    public Prenda getPrendaByUser(String userId, String idPrenda) {
+        //Devuelve la prenda del usuario especificado
+        return armarioRepository.getPrendaById(userId, idPrenda);
+    }
+
+    public void postPrendaByUser(Prenda prenda) {
+        // Guarda una nueva prenda en el armario del usuario
+        armarioRepository.postPrendaByUser(prenda.getId(), prenda.getColor(), prenda.getMarca(), prenda.getValoracion(), prenda.getNvaloraciones(), prenda.getNombre_usuario(), prenda.getTipo());
+    }
 
     public List<Outfit> getOutfitsByUser(String userId) {
-        // Devuleve todas las prendas del armario de un usuario
+        // Devuelve todas las prendas del armario de un usuario
         return armarioRepository.getOutfitsByUser(userId);
     }
+
 }
