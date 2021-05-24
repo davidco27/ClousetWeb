@@ -36,7 +36,7 @@ public class ArmarioController {
 
     @PostMapping("/prendas")
     public ResponseEntity guardarPrenda(@RequestBody Prenda prenda){
-        // Guardamos una nueva en el prenda en el armario
+        // Guardamos una nueva prenda en el armario
         armarioService.postPrendaByUser(prenda);
 
         return new ResponseEntity<>(HttpStatus.OK);
@@ -50,7 +50,7 @@ public class ArmarioController {
 
     }
 
-    @GetMapping("/prendas/{idOutfit}")
+    @GetMapping("/outfits/{idOutfit}")
     public ResponseEntity<Outfit> mostrarOutfitById(@RequestParam("userId") String userId, @PathVariable("idOutfit") String idOutfit){
         // Obtenemos una prendas de un usuario
         Outfit outfit = armarioService.getOutfitByUser(userId, idOutfit);
@@ -58,4 +58,11 @@ public class ArmarioController {
         return new ResponseEntity<>(outfit , HttpStatus.OK);
     }
 
+    @PostMapping("/outfits")
+    public ResponseEntity guardarOutfit(@RequestBody Outfit outfit){
+        // Guardamos un nuevo outfit en el armario
+        armarioService.postOutfitByUser(outfit);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

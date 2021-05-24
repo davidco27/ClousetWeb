@@ -39,4 +39,9 @@ public class ArmarioService {
         return armarioRepository.getOutfitById(userId, idOutfit);
     }
 
+    public void postOutfitByUser(Outfit outfit) {
+        // Guarda un nuevo outfit en el armario del usuario
+        armarioRepository.postOutfitByUser(outfit.getId(), outfit.getId_prendas(), outfit.getValoracion(), outfit.getNombre_usuario(), outfit.getNvaloraciones());
+    }
+
 }

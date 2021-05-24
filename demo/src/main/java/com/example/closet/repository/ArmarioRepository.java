@@ -26,6 +26,10 @@ public interface ArmarioRepository extends CrudRepository<Prenda, String> {
     @Query("SELECT * FROM \"OUTFITS\" WHERE \"nombre_usuario\" = :nombre_usuario")
     List<Outfit> getOutfitsByUser(String nombre_usuario);
 
-    @Query("SELECT * FROM \"PRENDAS\" WHERE \"nombre_usuario\" = :nombre_usuario AND \"id\" = :idOutfit")
+    @Query("SELECT * FROM \"OUTFITS\" WHERE \"nombre_usuario\" = :nombre_usuario AND \"id\" = :idOutfit")
     Outfit getOutfitById(String nombre_usuario, String idOutfit);
+
+    @Modifying
+    @Query("INSERT INTO \"OUTFITS\" values (:id,:id_prendas,:valoracion,:nombre_usuario,:nValoraciones)")
+    void postOutfitByUser(String id, String id_prendas, float valoracion, String nombre_usuario, int nValoraciones);
 }
