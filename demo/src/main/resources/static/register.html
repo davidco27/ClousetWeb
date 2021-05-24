@@ -54,9 +54,14 @@
           <form id="registerForm">
             <h5 style="color: #7b360a;"><strong>Introduzca un correo electrónico</strong></h5>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control is-invalid" id="email" placeholder="name@example.com" value="test@test.com">
-                <label for="email">Invalid input</label>
+                <input type="email" class="form-control is-invalid" id="email" placeholder="name@example.com" >
+                <label for="email">Email</label>
             </div>
+              <h5 style="color: #7b360a;"><strong>Introduzca un nombre de usuario</strong></h5>
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control is-invalid" id="username" placeholder="Username">
+                  <label for="username">Username</label>
+              </div>
             <h5 style="color: #7b360a;"><strong>Introduzca una contraseña</strong></h5>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" id="password" placeholder="Password">
@@ -78,5 +83,7 @@
         </div>
     </div>
     <script src="js/bootstrap.js"></script>
+    <script src="js/registerView.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </body>
 </html>

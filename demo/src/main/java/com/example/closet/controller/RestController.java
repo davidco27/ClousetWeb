@@ -46,7 +46,9 @@ public class RestController {
        user.setUsername(request.getUsername());
        user.setPassword(passwordEncoder.encode(request.getPassword()));
        service.registerUser(user);
-       return ResponseEntity.ok().body("Usuario registrado correctamente");
+        final String token=jwtTokenUtil.generateToken(service
+                .loadUserByUsername(user.getUsername()));
+       return ResponseEntity.ok().body(new JwtResponse(token));
     }
     @PostMapping(value = "/login")
     public ResponseEntity<?> login(@Valid @RequestBody JwtRequest authenticationRequest) throws Exception {

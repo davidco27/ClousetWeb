@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // tokenVerification();
 
-    var form = document.getElementById("registerForm");
+    var form = document.getElementById("loginForm");
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         return validateForm();
@@ -40,8 +40,8 @@ function validateForm() {
                 console.log(data);
                 if (typeof data.jwttoken !== 'undefined') {
                     console.log("Authenticated");
-                    Cookies.set('token', data.jwttoken)
-                    document.location.href="/home.html";
+                    Cookies.set('token', data.jwttoken);
+                    document.location.href="/index.html";
                 } else {
                     alert("Credential not recognized");
                 }

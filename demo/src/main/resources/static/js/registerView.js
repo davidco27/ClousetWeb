@@ -9,22 +9,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 });
 
-
-function tokenVerification() {
-
-    if (typeof Cookies.get('token') !== 'undefined') {
-        console.log("Cookie detected");
-        document.location.href="home.html";
-    }
-}
-
 function validateForm() {
     try {
+        var username = document.getElementById("username").value;
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
         var repeatedPassword = document.getElementById("repeatedPassword").value;
-
-        const data = { email: email, password: inputValue2, repeatedPassword: repeatedPassword};
+        if (password ==repeatedPassword) {
+                        document.getElementById("password").setCustomValidity('Passwords Must be Matching.');
+                        document.getElementById("repeatedPassword").setCustomValidity('Passwords Must be Matching.');
+                            return false;
+        } else {
+        document.getElementById("password").setCustomValidity('');
+         document.getElementById("repeatedPassword").setCustomValidity('');
+        const data = { username: username,email: email, password: password};
         const address = '/api/register';
 
         fetch(address, {
@@ -34,18 +32,20 @@ function validateForm() {
             },
             body: JSON.stringify(data)
             })
-            .then(response => response.json())
+            .then(response =>
+            response.json())
             .then(data => {
-                console.log(data);
-                if (typeof data.jwttoken !== 'undefined') {
+                if (typeof data=== 'string')
+                alert(data);
+                else{
                     console.log("Authenticated");
                     Cookies.set('token', data.jwttoken)
-                    document.location.href="/home.html";
-                } else {
-                    alert("Credential not recognized");
-                }
-            });
+                    alert("Te has registrado correctamente")
+                    document.location.href="/index.html";
+                 }
 
+            });
+    }
     } catch (err) {
         console.error(err.message);
     }

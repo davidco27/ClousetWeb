@@ -51,11 +51,11 @@
             <h2 style="margin-top:3%; margin-bottom:3%; color: #7b360a;" ><strong>Iniciar sesión</strong></h2>
         </div>
         <div class="row justify-content-md-center" style="height: 100%; width: 100%; margin-top: 2%;">
-          <form>
+          <form id="loginForm">
             <h5 style="color: #7b360a;"><strong>Introduce tu usuario</strong></h5>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control is-invalid" id="username" placeholder="name@example.com" value="test@test.com">
-                <label for="username">Invalid input</label>
+                <input type="text" class="form-control is-invalid" id="username" placeholder="Username">
+                <label for="username">Username</label>
             </div>
             <h5 style="color: #7b360a;"><strong>Una contraseña</strong></h5>
             <div class="form-floating mb-3">
@@ -78,5 +78,7 @@
         </div>
     </div>
     <script src="js/bootstrap.js"></script>
+    <script src="js/loginView.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </body>
 </html>
