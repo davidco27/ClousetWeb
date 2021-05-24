@@ -10,7 +10,7 @@ public class Outfit {
 
     @Id
     private String id;
-    private String idPrendas;
+    private String id_prendas;
     private float valoracion;
     private String nombre_usuario;
     private int nvaloraciones;
