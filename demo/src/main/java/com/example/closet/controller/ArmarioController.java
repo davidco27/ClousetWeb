@@ -50,4 +50,12 @@ public class ArmarioController {
 
     }
 
+    @GetMapping("/prendas/{idOutfit}")
+    public ResponseEntity<Outfit> mostrarOutfitById(@RequestParam("userId") String userId, @PathVariable("idOutfit") String idOutfit){
+        // Obtenemos una prendas de un usuario
+        Outfit outfit = armarioService.getOutfitByUser(userId, idOutfit);
+
+        return new ResponseEntity<>(outfit , HttpStatus.OK);
+    }
+
 }

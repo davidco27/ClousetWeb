@@ -3,7 +3,6 @@ package com.example.closet.service;
 import com.example.closet.model.Outfit;
 import com.example.closet.model.Prenda;
 import com.example.closet.repository.ArmarioRepository;
-import com.example.closet.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +32,11 @@ public class ArmarioService {
     public List<Outfit> getOutfitsByUser(String userId) {
         // Devuelve todas las prendas del armario de un usuario
         return armarioRepository.getOutfitsByUser(userId);
+    }
+
+    public Outfit getOutfitByUser(String userId, String idOutfit) {
+        //Devuelve el outfit del usuario especificado
+        return armarioRepository.getOutfitById(userId, idOutfit);
     }
 
 }
