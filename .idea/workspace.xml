@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc89fed6-7b67-45ae-906a-485dbee268a3" name="Default Changelist" comment="Html clouset login/register/index v2">
-      <change afterPath="$PROJECT_DIR$/demo/src/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/loginView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/static/js/registerView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/ClousetApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/ClousetApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/resources/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/resources/static/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/test/java/com/example/closet/ClousetApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2021_11_41_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2021_11_53_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_05_2021_12_12_[Default_Changelist]/shelved.patch" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +40,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo/pom.xml" />
   </component>
   <component name="RunManager">
     <configuration name="ClousetApplication" type="Application" factoryName="Application" nameIsGenerated="true">

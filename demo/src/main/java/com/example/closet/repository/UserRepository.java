@@ -20,7 +20,4 @@ public interface UserRepository extends CrudRepository<Usuario, Long> {
     @Query("SELECT * FROM \"USERS\" WHERE \"email\" = :email")
     Usuario getUserByEmail(@Param("email") String email);
 
-
-
-
 }
