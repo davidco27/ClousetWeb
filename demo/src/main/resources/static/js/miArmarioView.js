@@ -30,20 +30,13 @@ function showPrendaInfo(response){
         var div = '<div class="container-fluid mt-3 ml-8" id="info">';
         var link = '<a href="#" id="link"></a>';
         var imagen = '<img src="#" alt="una imagen">';
-        var tag = '<p>' + prenda.nombre + '</p>';
+        var nombre = '<p>' + prenda.nombre + '</p>';
         var marca = '<p>' + prenda.marca + '</p>';
+        var valoracion = '<p>' + prenda.valoracion + '</p>';
         var end = '</div>';
 
-        html = html + div + link + imagen + tag + marca + end;
+        html = html + div + link + imagen + nombre + marca + valoracion + end;
 
-        /*
-        var div = '<div class="container-fluid mt-3 ml-8">';
-        var linea1= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #c77949; background-color: #f8c6a7;">' + prenda.id + '</div>'
-        var linea2= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.color + '</div>'
-        var linea3= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.valoracion + '</div>'
-        var linea4= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.marca + '</div>'
-        var end = '</div>';
-        */
     });
     document.getElementById("armario").innerHTML=html;
 }
@@ -65,7 +58,7 @@ function getOutfits() {
             }
         })
         .then(r => {
-            console.log(showPrendaInfo(r));
+            console.log(showOutfitInfo(r));
         })
         .catch(e => console.log(e););
 
@@ -73,15 +66,15 @@ function getOutfits() {
 
 function showOutfitInfo(response){
     var html='';
-    response.forEach(prenda => {
-        var div = '<div class="container-fluid mt-3 ml-8">';
-        var linea1= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #c77949; background-color: #f8c6a7;">' + prenda.id + '</div>'
-        var linea2= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.color + '</div>'
-        var linea3= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.valoracion + '</div>'
-        var linea4= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.marca + '</div>'
+    response.forEach(outfit => {
+        var div = '<div class="container-fluid mt-3 ml-8" id="info">';
+        var link = '<a href="#" id="link"></a>';
+        var imagen = '<img src="#" alt="una imagen">';
+        var nombre = '<p>' + outfit.nombre + '</p>';
+        var valoracion = '<p>' + outfit.valoracion + '</p>';
         var end = '</div>';
 
-        html = html + div + linea1 + linea2 + linea3 + linea4 + end;
+        html = html + div + link + imagen + nombre + valoracion + end;
     });
     document.getElementById("armario").innerHTML=html;
 }
