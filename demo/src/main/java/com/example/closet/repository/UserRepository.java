@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends CrudRepository<Usuario, Long> {
 
     @Query("SELECT * FROM \"USERS\" WHERE \"username\" = :username")
-    Usuario getUserByUserName( String username);
+    Usuario getUserByUserName(String username);
 
     @Modifying
     @Query("insert into \"USERS\" values (:username,:email,:password)")

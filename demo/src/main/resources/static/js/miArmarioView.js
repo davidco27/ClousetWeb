@@ -1,8 +1,8 @@
 var usuario = Cookies.get('username');
-document.getElementById("nombreUsuario").innerHTML= "<em>"+usuario"</em>";
+document.getElementById("nombreUsuario").innerHTML= "<em>" + usuario + "</em>";
 
 function getPrendas() {
-    fetch('http://localhost:8080/miarmario/prendas?userId=' + usuario
+    fetch('http://localhost:8080/miarmario/prendas?userId=' + usuario,
         {
             method: 'GET',
             headers: {
@@ -20,7 +20,7 @@ function getPrendas() {
         .then(r => {
             console.log(showPrendaInfo(r));
         })
-        .catch(e => console.log(e););
+        .catch(e => console.log(e));
 
 }
 
@@ -42,7 +42,7 @@ function showPrendaInfo(response){
 }
 
 function getOutfits() {
-    fetch('http://localhost:8080/miarmario/outfits?userId=' + usuario
+    fetch('http://localhost:8080/miarmario/outfits?userId=' + usuario,
         {
             method: 'GET',
             headers: {
@@ -60,7 +60,7 @@ function getOutfits() {
         .then(r => {
             console.log(showOutfitInfo(r));
         })
-        .catch(e => console.log(e););
+        .catch(e => console.log(e));
 
 }
 
