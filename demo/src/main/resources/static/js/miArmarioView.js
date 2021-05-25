@@ -1,5 +1,6 @@
- var usuario = Cookies.get('username');
- document.getElementById("nombreUsuario").innerHTML= "<em>"+usuario"</em>";
+var usuario = Cookies.get('username');
+document.getElementById("nombreUsuario").innerHTML= "<em>"+usuario"</em>";
+
 function getPrendas() {
     fetch('http://localhost:8080/miarmario/prendas?userId=' + usuario
         {
