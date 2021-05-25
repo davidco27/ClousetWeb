@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc89fed6-7b67-45ae-906a-485dbee268a3" name="Default Changelist" comment="hola">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/model/Outfit.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/model/Outfit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/repository/ArmarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/repository/ArmarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/controller/ArmarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/closet/controller/ArmarioController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="ClousetApplication" type="Application" factoryName="Application" nameIsGenerated="true">
