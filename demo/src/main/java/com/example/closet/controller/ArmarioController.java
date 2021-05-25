@@ -41,7 +41,6 @@ public class ArmarioController {
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
     @GetMapping("/outfits")
     public ResponseEntity<List<Outfit>> mostrarOutfits(@RequestParam("userId") String userId){
         // Obtenemos todos los outfits de un usuario en concreto
