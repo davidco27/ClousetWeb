@@ -34,7 +34,7 @@ public class ArmarioService {
 
     public void postPrendaByUser(Prenda prenda) {
         // Guarda una nueva prenda en el armario del usuario
-        armarioRepository.postPrendaByUser(prenda.getId(),prenda.getNombre(), prenda.getColor(), prenda.getMarca(), prenda.getValoracion(), prenda.getNvaloraciones(), prenda.getNombre_usuario(), prenda.getTipo());
+        armarioRepository.postPrendaByUser(prenda.getId(),prenda.getNombre(), prenda.getFecha_creacion(),prenda.getColor(), prenda.getMarca(), prenda.getValoracion(), prenda.getNvaloraciones(), prenda.getNombre_usuario(), prenda.getTipo());
     }
 
     public List<Outfit> getOutfitsByUser(String userId) {
@@ -49,7 +49,7 @@ public class ArmarioService {
 
     public void postOutfitByUser(Outfit outfit) {
         // Guarda un nuevo outfit en el armario del usuario
-        armarioRepository.postOutfitByUser(outfit.getId(), outfit.getId_prendas(), outfit.getValoracion(), outfit.getNombre_usuario(), outfit.getNvaloraciones());
+        armarioRepository.postOutfitByUser(outfit.getId(),outfit.getId_prendas(),outfit.getNombre(),outfit.getFecha_creacion(), outfit.getValoracion(), outfit.getNombre_usuario(), outfit.getNvaloraciones());
     }
 
 }

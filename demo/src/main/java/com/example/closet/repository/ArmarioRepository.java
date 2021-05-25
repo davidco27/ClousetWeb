@@ -7,6 +7,7 @@ import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -24,8 +25,8 @@ public interface ArmarioRepository extends CrudRepository<Prenda, String> {
     Prenda deleteOutfitById(String idOutfit);
     /* FUTURO: esto es un mensaje del pasado para que incluyais la foto */
     @Modifying
-    @Query("INSERT INTO \"PRENDAS\" values (:id,:nombre,:color,:marca,:valoracion,:nValoraciones,:nombre_usuario,:tipo)")
-    void postPrendaByUser(String id,String nombre, String color, String marca, float valoracion, int nValoraciones, String nombre_usuario, String tipo);
+    @Query("INSERT INTO \"PRENDAS\" values (:id,:color,:marca,:valoracion,:nValoraciones,:nombre_usuario,:tipo,:nombre,:fecha)")
+    void postPrendaByUser(String id, String nombre, Date fecha, String color, String marca, float valoracion, int nValoraciones, String nombre_usuario, String tipo);
 
     @Query("SELECT * FROM \"OUTFITS\" WHERE \"nombre_usuario\" = :nombre_usuario")
     List<Outfit> getOutfitsByUser(String nombre_usuario);
@@ -34,6 +35,7 @@ public interface ArmarioRepository extends CrudRepository<Prenda, String> {
     Outfit getOutfitById(String nombre_usuario, String idOutfit);
 
     @Modifying
-    @Query("INSERT INTO \"OUTFITS\" values (:id,:id_prendas,:valoracion,:nombre_usuario,:nValoraciones)")
-    void postOutfitByUser(String id, String id_prendas, float valoracion, String nombre_usuario, int nValoraciones);
+    @Query("INSERT INTO \"OUTFITS\" values (:id,:id_prendas,:valoracion,:nombre_usuario,:nValoraciones,:nombre,:fecha)")
+    void postOutfitByUser(String id, String id_prendas,String nombre, Date fecha, float valoracion, String nombre_usuario, int nValoraciones);
+
 }
