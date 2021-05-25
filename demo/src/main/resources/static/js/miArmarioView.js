@@ -27,14 +27,23 @@ function getPrendas() {
 function showPrendaInfo(response){
     var html='';
     response.forEach(prenda => {
+        var div = '<div id="resumen">';
+        var link = '<a href="#" id="enlace"></a>';
+        var imagen = '<img src="#" alt="una imagen">';
+        var tag = '<p>texto</p>';
+        var marca = '<p>más texto</p>';
+        var end = '</div>';
+
+        html = html + div + link + imagen + tag + marca + end;
+
+        /*
         var div = '<div class="container-fluid mt-3 ml-8">';
         var linea1= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #c77949; background-color: #f8c6a7;">' + prenda.id + '</div>'
         var linea2= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.color + '</div>'
         var linea3= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.valoracion + '</div>'
         var linea4= '<div class="card d-inline-block" style="width: 23%;margin-left: 1%; margin-bottom: 1%; color: #f8c6a7; background-color: #7b360a;">' + prenda.marca + '</div>'
         var end = '</div>';
-
-        html = html + div + linea1 + linea2 + linea3 + linea4 + end;
+        */
     });
     document.getElementById("armario").innerHTML=html;
 }
