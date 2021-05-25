@@ -23,10 +23,18 @@ public class ArmarioService {
         //Devuelve la prenda del usuario especificado
         return armarioRepository.getPrendaById(userId, idPrenda);
     }
+    public  void deletePrenda(String idPrenda) {
+        //Devuelve la prenda del usuario especificado
+        armarioRepository.deletePrendaById(idPrenda);
+    }
+    public  void deleteOufit(String idOutfit) {
+        //Devuelve la prenda del usuario especificado
+        armarioRepository.deletePrendaById(idOutfit);
+    }
 
     public void postPrendaByUser(Prenda prenda) {
         // Guarda una nueva prenda en el armario del usuario
-        armarioRepository.postPrendaByUser(prenda.getId(), prenda.getColor(), prenda.getMarca(), prenda.getValoracion(), prenda.getNvaloraciones(), prenda.getNombre_usuario(), prenda.getTipo());
+        armarioRepository.postPrendaByUser(prenda.getId(),prenda.getNombre(), prenda.getColor(), prenda.getMarca(), prenda.getValoracion(), prenda.getNvaloraciones(), prenda.getNombre_usuario(), prenda.getTipo());
     }
 
     public List<Outfit> getOutfitsByUser(String userId) {
