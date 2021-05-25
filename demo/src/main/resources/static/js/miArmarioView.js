@@ -27,11 +27,11 @@ function getPrendas() {
 function showPrendaInfo(response){
     var html='';
     response.forEach(prenda => {
-        var div = '<div id="resumen">';
-        var link = '<a href="#" id="enlace"></a>';
+        var div = '<div class="container-fluid mt-3 ml-8" id="info">';
+        var link = '<a href="#" id="link"></a>';
         var imagen = '<img src="#" alt="una imagen">';
-        var tag = '<p>texto</p>';
-        var marca = '<p>más texto</p>';
+        var tag = '<p>' + prenda.nombre + '</p>';
+        var marca = '<p>' + prenda.marca + '</p>';
         var end = '</div>';
 
         html = html + div + link + imagen + tag + marca + end;

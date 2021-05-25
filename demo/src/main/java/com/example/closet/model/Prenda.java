@@ -10,6 +10,7 @@ public class Prenda {
 
     @Id
     private String id;
+    private String nombre;
     private String color;
     private String marca;
     private float valoracion;
