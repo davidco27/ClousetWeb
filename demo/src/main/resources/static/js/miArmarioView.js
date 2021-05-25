@@ -36,8 +36,8 @@ function showPrendaInfo(response){
         var end = '</div>';
 
         html = html + div + link + imagen + nombre + marca + valoracion + end;
-
     });
+
     document.getElementById("armario").innerHTML=html;
 }
 
@@ -76,5 +76,6 @@ function showOutfitInfo(response){
 
         html = html + div + link + imagen + nombre + valoracion + end;
     });
+
     document.getElementById("armario").innerHTML=html;
 }
