@@ -36,5 +36,28 @@ function showPrendaInfo(response){
 
         html = html + div + linea1 + linea2 + linea3 + linea4 + end;
     });
-    document.getElementById("pais").innerHTML=html;
+    document.getElementById("armario").innerHTML=html;
+}
+
+function getOutfits() {
+    fetch('http://localhost:8080/miarmario/outfits?userId=' + usuario
+        {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            }
+        })
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw res;
+            }
+        })
+        .then(r => {
+            console.log(showPrendaInfo(r));
+        })
+        .catch(e => console.log(e););
+
 }
