@@ -36,5 +36,5 @@ function showPrendaInfo(response){
 
         html = html + div + linea1 + linea2 + linea3 + linea4 + end;
     });
-    document.getElementById("pais").innerHTML=html;
+
 }

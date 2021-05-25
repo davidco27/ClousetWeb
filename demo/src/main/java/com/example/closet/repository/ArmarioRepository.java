@@ -18,10 +18,14 @@ public interface ArmarioRepository extends CrudRepository<Prenda, String> {
     @Query("SELECT * FROM \"PRENDAS\" WHERE \"nombre_usuario\" = :nombre_usuario AND \"id\" = :idPrenda")
     Prenda getPrendaById(String nombre_usuario, String idPrenda);
 
+    @Query("DELETE FROM \"PRENDAS\" WHERE  \"id\" = :idPrenda")
+    Prenda deletePrendaById(String idPrenda);
+    @Query("DELETE FROM \"OUTFITS\" WHERE  \"id\" = :idOutfit")
+    Prenda deleteOutfitById(String idOutfit);
     /* FUTURO: esto es un mensaje del pasado para que incluyais la foto */
     @Modifying
-    @Query("INSERT INTO \"PRENDAS\" values (:id,:color,:marca,:valoracion,:nValoraciones,:nombre_usuario,:tipo)")
-    void postPrendaByUser(String id, String color, String marca, float valoracion, int nValoraciones, String nombre_usuario, String tipo);
+    @Query("INSERT INTO \"PRENDAS\" values (:id,:nombre,:color,:marca,:valoracion,:nValoraciones,:nombre_usuario,:tipo)")
+    void postPrendaByUser(String id,String nombre, String color, String marca, float valoracion, int nValoraciones, String nombre_usuario, String tipo);
 
     @Query("SELECT * FROM \"OUTFITS\" WHERE \"nombre_usuario\" = :nombre_usuario")
     List<Outfit> getOutfitsByUser(String nombre_usuario);

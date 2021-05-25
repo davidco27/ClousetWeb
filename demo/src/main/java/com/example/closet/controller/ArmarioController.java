@@ -33,6 +33,18 @@ public class ArmarioController {
 
         return new ResponseEntity<>(prenda , HttpStatus.OK);
     }
+    @DeleteMapping("/prendas/{idPrenda}")
+    public ResponseEntity borrarPrenda(@PathVariable("idPrenda") String idPrenda){
+        //Borramos una prenda
+        armarioService.deletePrenda(idPrenda);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @DeleteMapping("/outfits/{idOutfit}")
+    public ResponseEntity borrarOutfit(@PathVariable("idOutfit") String idOutfit){
+        //Borramos un outfit
+        armarioService.deleteOufit(idOutfit);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
     @PostMapping("/prendas")
     public ResponseEntity guardarPrenda(@RequestBody Prenda prenda){
