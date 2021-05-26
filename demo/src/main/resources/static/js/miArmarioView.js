@@ -18,7 +18,7 @@ function getPrendas() {
             }
         })
         .then(r => {
-            console.log(showPrendaInfo(r));
+            showPrendaInfo(r);
         })
         .catch(e => console.log(e));
 
@@ -27,15 +27,18 @@ function getPrendas() {
 function showPrendaInfo(response){
     var html='';
     response.forEach(prenda => {
-        var div = '<div class="container-fluid mt-3 ml-8" id="info">';
-        var link = '<a href="#" id="link"></a>';
-        var imagen = '<img src="#" alt="una imagen">';
+        var div = '<div class="media">';
+        // var link = '<a href="detalle.html" id="link"></a>';
+        var imagen = '<img src="images/IconNavbar.png" width="3%" height="3%" class="mr-3 align-self-center" alt="Sample Image">';
+        var div2 = '<div class="media-body">';
+        var foo = '<h5 class="mt-0">Jhon Carter <small><i>Posted on January 10, 2019</i></small></h5>';
         var nombre = '<p>' + prenda.nombre + '</p>';
         var marca = '<p>' + prenda.marca + '</p>';
         var valoracion = '<p>' + prenda.valoracion + '</p>';
         var end = '</div>';
 
-        html = html + div + link + imagen + nombre + marca + valoracion + end;
+        // html = html + div + link + imagen + div2 + foo + nombre + marca + valoracion + end + end;
+        html = html + div  + imagen + div2 + foo + nombre + marca + valoracion + end + end;
     });
 
     document.getElementById("armario").innerHTML=html;
@@ -58,7 +61,7 @@ function getOutfits() {
             }
         })
         .then(r => {
-            console.log(showOutfitInfo(r));
+            showOutfitInfo(r);
         })
         .catch(e => console.log(e));
 
@@ -67,14 +70,16 @@ function getOutfits() {
 function showOutfitInfo(response){
     var html='';
     response.forEach(outfit => {
-        var div = '<div class="container-fluid mt-3 ml-8" id="info">';
-        var link = '<a href="#" id="link"></a>';
-        var imagen = '<img src="#" alt="una imagen">';
+        var div = '<div class="media">';
+        // var link = '<a href="detalle.html" id="link"></a>';
+        var imagen = '<img src="images/IconNavbar.png" width="3%" height="3%" class="mr-3 align-self-center" alt="Sample Image">';
+        var div2 = '<div class="media-body">';
         var nombre = '<p>' + outfit.nombre + '</p>';
         var valoracion = '<p>' + outfit.valoracion + '</p>';
         var end = '</div>';
 
-        html = html + div + link + imagen + nombre + valoracion + end;
+        // html = html + div + link + div2 + nombre + valoracion + end + end;
+        html = html + div + imagen + div2 + nombre + valoracion + end + end;
     });
 
     document.getElementById("armario").innerHTML=html;

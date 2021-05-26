@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Clouset • Mi Armario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/infocontainers.css">
     <link rel="shortcut icon" href="images/Icon.png"/>
@@ -57,7 +58,8 @@
         <button type="submit" class="btn btn-solido btn-lg" style="width: 30%;" onclick="getPrendas()">Prendas</button>
         <button type="submit" class="btn btn-solido btn-lg" style="width: 30%;" onclick="getOutfits()">Outfits</button>
     </div>
-    <div id="armario" class="container-fluid mt-3 ml-8"></div>
+    <div class="container" id="armario" style="background-color: #f8c6a7; width: 100%; margin-top: 3%; border-style: solid; border-width: 0.4em; border-radius: 1em; border-color:#7b360a;">
+    </div>
 </body>
 <footer>
     <div class="container" style="margin-top: 5%">
@@ -67,5 +69,4 @@
 </footer>
 <script src= "js/bootstrap.js"></script>
 <script src="js/miArmarioView.js"></script>
-
 </html>
