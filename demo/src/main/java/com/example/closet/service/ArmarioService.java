@@ -21,15 +21,29 @@ public class ArmarioService {
 
     public Prenda getPrendaByUser(String userId, String idPrenda) {
         //Devuelve la prenda del usuario especificado
-        return armarioRepository.getPrendaById(userId, idPrenda);
+        return armarioRepository.getPrendaById(idPrenda);
     }
     public  void deletePrenda(String idPrenda) {
         //Devuelve la prenda del usuario especificado
         armarioRepository.deletePrendaById(idPrenda);
     }
-    public  void deleteOufit(String idOutfit) {
+    public  void deleteOutfit(String idOutfit) {
         //Devuelve la prenda del usuario especificado
         armarioRepository.deletePrendaById(idOutfit);
+    }
+    public  void valorarPrenda(String idPrenda,float valoracion) {
+        //Devuelve la prenda del usuario especificado
+        Prenda prenda=armarioRepository.getPrendaById(idPrenda);
+        int valoraciones = prenda.getNvaloraciones();
+        float valoracionNueva = ((prenda.getValoracion()* valoraciones)+ valoracion)/ (valoraciones+1);
+        armarioRepository.valorarPrendaById(valoracionNueva,valoraciones+1);
+    }
+    public  void valorarOufit(String idOutfit,float valoracion) {
+        //Devuelve la prenda del usuario especificado
+        Outfit outfit=armarioRepository.getOutfitById(idOutfit);
+        int valoraciones = outfit.getNvaloraciones();
+        float valoracionNueva = ((outfit.getValoracion()* valoraciones)+ valoracion)/ (valoraciones+1);
+        armarioRepository.valorarOutfitById(valoracionNueva,valoraciones+1);
     }
 
     public void postPrendaByUser(Prenda prenda) {
@@ -41,10 +55,9 @@ public class ArmarioService {
         // Devuelve todas las prendas del armario de un usuario
         return armarioRepository.getOutfitsByUser(userId);
     }
-
-    public Outfit getOutfitByUser(String userId, String idOutfit) {
+    public Outfit getOutfitById(String userId, String idOutfit) {
         //Devuelve el outfit del usuario especificado
-        return armarioRepository.getOutfitById(userId, idOutfit);
+        return armarioRepository.getOutfitById(idOutfit);
     }
 
     public void postOutfitByUser(Outfit outfit) {

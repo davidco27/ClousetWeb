@@ -41,8 +41,20 @@ public class ArmarioController {
     }
     @DeleteMapping("/outfits/{idOutfit}")
     public ResponseEntity borrarOutfit(@PathVariable("idOutfit") String idOutfit){
+        //Borramos una prenda
+        armarioService.deleteOutfit(idOutfit);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @PutMapping("/prendas/{idPrenda}")
+    public ResponseEntity valorarPrenda(@PathVariable("idPrenda") String idPrenda,@RequestParam("valoracion") float valoracion){
+        //Borramos una prenda
+        armarioService.valorarPrenda(idPrenda,valoracion);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @PutMapping("/outfits/{idOutfit}")
+    public ResponseEntity valorarOutfit(@PathVariable("idOutfit") String idOutfit,@RequestParam("valoracion") float valoracion){
         //Borramos un outfit
-        armarioService.deleteOufit(idOutfit);
+        armarioService.valorarOufit(idOutfit,valoracion);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -64,7 +76,7 @@ public class ArmarioController {
     @GetMapping("/outfits/{idOutfit}")
     public ResponseEntity<Outfit> mostrarOutfitById(@RequestParam("userId") String userId, @PathVariable("idOutfit") String idOutfit){
         // Obtenemos una prendas de un usuario
-        Outfit outfit = armarioService.getOutfitByUser(userId, idOutfit);
+        Outfit outfit = armarioService.getOutfitById(userId, idOutfit);
 
         return new ResponseEntity<>(outfit , HttpStatus.OK);
     }
