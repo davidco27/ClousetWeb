@@ -20,9 +20,6 @@ function validateForm() {
             document.getElementById("repeatedPassword").setCustomValidity('Passwords Must be Matching.');
             return false;
         } else {
-
-        // FUTURO: comprobar que tanto el nombre de usuario como el email no esten ya registrados
-
         document.getElementById("password").setCustomValidity('');
         document.getElementById("repeatedPassword").setCustomValidity('');
         const data = { username: username,email: email, password: password};
