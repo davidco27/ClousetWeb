@@ -1,6 +1,6 @@
-var usuario = Cookies.get('username');
+var usuario = localStorage.getItem('username');
 document.getElementById("nombreUsuario").innerHTML= "<em>" + usuario + "</em>";
-
+tokenVerification();
 function getPrendas() {
     fetch('http://localhost:8080/miarmario/prendas?userId=' + usuario,
         {
@@ -78,4 +78,13 @@ function showOutfitInfo(response){
     });
 
     document.getElementById("armario").innerHTML=html;
+}
+function tokenVerification() {
+
+    if (typeof localStorage.getItem('token') === 'undefined') {
+        console.log("Cookie not detected");
+        console.log(Cookies.get('token'));
+        document.location.href="login.html";
+    }
+    console.log("Cookie detected");
 }

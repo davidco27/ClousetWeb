@@ -39,7 +39,7 @@ function validateForm() {
                 alert(data);
                 else{
                     console.log("Authenticated");
-                    Cookies.set('token', data.jwttoken)
+                    localStorage.setItem('token', data.jwttoken)
                     alert("Te has registrado correctamente")
                     document.location.href="/index.html";
                  }

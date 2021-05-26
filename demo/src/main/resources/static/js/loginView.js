@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    // tokenVerification();
 
     var form = document.getElementById("loginForm");
     form.addEventListener("submit", function(e) {
@@ -40,7 +39,8 @@ function validateForm() {
                 console.log(data);
                 if (typeof data.jwttoken !== 'undefined') {
                     console.log("Authenticated");
-                    Cookies.set('token', data.jwttoken);
+                    localStorage.setItem('token', data.jwttoken);
+                    localStorage.setItem('username', username);
                     document.location.href="/index.html";
                 } else {
                     alert("Credential not recognized");
