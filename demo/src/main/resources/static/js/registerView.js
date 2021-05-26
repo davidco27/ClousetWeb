@@ -15,13 +15,16 @@ function validateForm() {
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
         var repeatedPassword = document.getElementById("repeatedPassword").value;
-        if (password ==repeatedPassword) {
-                        document.getElementById("password").setCustomValidity('Passwords Must be Matching.');
-                        document.getElementById("repeatedPassword").setCustomValidity('Passwords Must be Matching.');
-                            return false;
+        if (password != repeatedPassword) {
+            document.getElementById("password").setCustomValidity('Passwords Must be Matching.');
+            document.getElementById("repeatedPassword").setCustomValidity('Passwords Must be Matching.');
+            return false;
         } else {
+
+        // FUTURO: comprobar que tanto el nombre de usuario como el email no esten ya registrados
+
         document.getElementById("password").setCustomValidity('');
-         document.getElementById("repeatedPassword").setCustomValidity('');
+        document.getElementById("repeatedPassword").setCustomValidity('');
         const data = { username: username,email: email, password: password};
         const address = '/api/register';
 
