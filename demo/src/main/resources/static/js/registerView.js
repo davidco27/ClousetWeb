@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-
-
     var form = document.getElementById("registerForm");
     form.addEventListener("submit", function(e) {
         e.preventDefault();
