@@ -84,6 +84,50 @@ function showOutfitInfo(response){
 
     document.getElementById("armario").innerHTML=html;
 }
+function borrarPrenda() {
+var id = localStorage.getItem('id');
+fetch('http://localhost:8080/miarmario/prendas/'+id,
+        {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            }
+        })
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw res;
+            }
+        })
+        .then(r => {
+            document.location.href="home.html";
+        })
+        .catch(e => console.log(e));
+}
+function valorarPrenda(){
+var id = localStorage.getItem('id');
+fetch('http://localhost:8080/miarmario/prendas/'+id+'?valoracion=' + valoracion,
+        {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            }
+        })
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw res;
+            }
+        })
+        .then(r => {
+            document.location.href="home.html";
+        })
+        .catch(e => console.log(e));
+}
 function tokenVerification() {
 
     if (typeof localStorage.getItem('token') === 'undefined') {
