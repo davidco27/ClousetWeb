@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    // tokenVerification();
+
 
     var form = document.getElementById("registerForm");
     form.addEventListener("submit", function(e) {
@@ -40,6 +40,7 @@ function validateForm() {
                 else{
                     console.log("Authenticated");
                     localStorage.setItem('token', data.jwttoken)
+                    localStorage.setItem('username', username)
                     alert("Te has registrado correctamente")
                     document.location.href="/index.html";
                  }

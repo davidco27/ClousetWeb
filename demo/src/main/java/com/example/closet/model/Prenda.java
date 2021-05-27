@@ -9,7 +9,6 @@ import java.util.Date;
 @Data
 @Table("PRENDAS")
 public class Prenda {
-
     @Id
     private String id;
     private String color;

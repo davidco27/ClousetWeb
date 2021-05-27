@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Clouset • Contacta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="shortcut icon" href="images/Icon.png"/>
+</head>
+<body style="background-color: #ffdfcb;" background="images/FondoPantallaEstrellas.png">
+<nav class="navbar navbar-expand-lg navbar-clouset">
+    <div class="container-fluid">
+        <img src="images/IconNavbar.png" width="3%" height="3%" alt="Clouset Icon">
+        <a class="navbar-brand" href="index.html"><h1>Clouset</h1></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Mi armario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">¿Quiénes somos?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Contacte con nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item-clouset" href="#">Desarrollados</a></li>
+                        <li><a class="dropdown-item-clouset" href="#">En desarrollo</a></li>
+                        <li><hr class="dropdown-divider-clouset"></li>
+                        <li><a class="dropdown-item-clouset" href="#">Próximamente</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Marcas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Foro de Usuarios(Próximamente)</a>
+                </li>
+            </ul>
+            <a class="btn btn-solido" href="login.html" style="margin-right: 1%;" role="button"><strong>Iniciar</strong></a>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="¡Encuentralo ahora!" aria-label="Search">
+                <button class="btn btn-simple" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container" style="background-color: #f8c6a7; width: 80%; margin-top: 2%; border-style: solid; border-width:1%; border-radius: 4%; border-color:#7b360a;">
+    <div class="row justify-content-md-center">
+        <h1 style="margin-top:2%; text-align:center; color: #c77949;"><strong>Introduce los datos de tu nueva prenda</strong></h1>
+        <form id ="postForm">
+            <h5 style="color: #7b360a;"><strong>Nombre</strong></h5>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="name" required="obligatorio">
+                <label for="name">Escribe el nombre de tu prenda</label>
+            </div>
+            <h5 style="color: #7b360a;"><strong>Marca</strong></h5>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="marca" required="obligatorio">
+                <label for="marca">Escribe la marca de la prenda</label>
+            </div>
+            <h5 style="color: #7b360a;"><strong>Tipo</strong></h5>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="tipo" required="obligatorio">
+                <label for="tipo">Escribe el tipo de prenda</label>
+            </div>
+            <h5 style="color: #7b360a;"><strong>Color</strong></h5>
+            <div class="form-floating mb-3">
+                <input class="form-control" name="message" id="color" required="obligatorio"/>
+                <label for="color">Escribe aquí el color de la prneda</label>
+            </div>
+            <div class="text-center" style="margin-top: 3%; margin-bottom: 3%;">
+                <button type="submit" class="btn btn-solido" style="width: 80%;">Enviar</button>
+            </div>
+            .
+
+        </form>
+    </div>
+</div>
+</body>
+<script src= "js/bootstrap.js"></script>
+<script src="js/postView.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</html>
+
