@@ -1,13 +1,12 @@
-
 var usuario = localStorage.getItem('username');
-    var form = document.getElementById("postForm");
+    var form = document.getElementById("newPrendaForm");
     form.addEventListener("submit", function(e) {
         e.preventDefault();
         return validateForm();
     });
 function validateForm() {
     try {
-        var name = document.getElementById("name").value;
+        var name = document.getElementById("prendaName").value;
         var marca = document.getElementById("marca").value;
         var color = document.getElementById("color").value;
         var tipo= document.getElementById("tipo").value;
