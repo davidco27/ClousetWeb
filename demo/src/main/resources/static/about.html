@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Clouset • Contacta</title>
+    <title>Clouset • Mi Armario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/infocontainers.css">
     <link rel="shortcut icon" href="images/Icon.png"/>
 </head>
-<body style="background-color: #ffdfcb;" background="images/FondoPantallaEstrellas.png">
+<body style="background-color: #c77949;" >
     <nav class="navbar navbar-expand-lg navbar-clouset">
         <div class="container-fluid">
             <img src="images/IconNavbar.png" width="3%" height="3%" alt="Clouset Icon">
@@ -21,10 +23,10 @@
                         <a class="nav-link" aria-current="page" href="login.html">Mi armario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">¿Quiénes somos?</a>
+                        <a class="nav-link active">¿Quiénes somos?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active">Contacte con nosotros</a>
+                        <a class="nav-link" href="contact.html">Contacte con nosotros</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
@@ -50,39 +52,22 @@
             </div>
         </div>
     </nav>
-    <div class="container" style="background-color: #f8c6a7; width: 80%; margin-top: 2%; border-style: solid; border-width: 0.2em; border-radius: 1em; border-color:#7b360a;">
+    <div class="container" style="background-color: #f8c6a7; width: 80%; margin-top: 2%; border-style: solid; border-width:1%; border-radius: 4%; border-color:#7b360a;">
         <div class="row justify-content-md-center">
-            <h1 style="margin-top:2%; text-align:center; color: #c77949;"><strong>Contacta con nosotros</strong></h1>
-            <form id ="contactForm">
-                <h5 style="color: #7b360a;"><strong>Usuario</strong></h5>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="username" required="obligatorio">
-                    <label for="username">Escribe tu usuario</label>
-                </div>
-                <h5 style="color: #7b360a;"><strong>Teléfono</strong></h5>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="tlf" required="obligatorio">
-                    <label for="tlf">Escribe tu número de teléfono</label>
-                </div>
-                <h5 style="color: #7b360a;"><strong>Asunto</strong></h5>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="issue" required="obligatorio">
-                    <label for="issue">Escribe un asunto</label>
-                </div>
-                <h5 style="color: #7b360a;"><strong>Mensaje</strong></h5>
-                <div class="form-floating mb-3">
-                    <textarea class="form-control rounded-0" name="message" id="message" required="obligatorio"></textarea>
-                    <label for="message">Escribe aquí el mensaje que nos quieras enviar</label>
-                </div>
-                <div class="text-center" style="margin-top: 3%; margin-bottom: 3%;">
-                    <button type="submit" class="btn btn-solido" style="width: 80%;">Enviar</button>
-                </div>
-            </form>
+            <h2 style="margin-top:2%; text-align:center; color: #c77949;"><strong>¿Quiénes somos?</strong></h2>
+            <p></p>
+            <p style="font-size: 15px">¡Hola! Somos Clouset, una plataforma digital creada por tres estudiantes de Ingeniería de Telecomunicación.</p>
+            <p style="font-size: 15px">Clouset es una aplicación cuya misión es poder proporcionar al usuario con su propio armario digital. En el podrá almacenar todas las prendas que tenga y asi poder combinarlas entre ellas y asi crear distintos outfits.</p>
+
         </div>
     </div>
 </body>
+<footer>
+    <div class="container" style="margin-top: 5%">
+        <p class="mb-0" style="color: #f8c6a7;">Diseñada por <b>el grupo @Clouset</b>. Para la difusión de las actividades desarrolladas por @ClousetWeb.</p>
+        <p class="mb-0" style="color: #f8c6a7;">Version 0.1 desarrollada para la asignatura de Programación de Aplicaciones Telemáticas.</p>
+    </div>
+</footer>
 <script src= "js/bootstrap.js"></script>
-<script src="js/contactView.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script src="js/miArmarioView.js"></script>
 </html>
-
