@@ -1,4 +1,26 @@
 # Practica final: Clouset Web
+
+## Manual de usuario
+Aquí se detalla el funcionamiento de la aplicación, que es principalmente la asociada a la segunda opción, "Mi armario"
+1. Pulse la opción de "Mi armario", situada en la parte superior de la pantalla
+2. Si usted no ha iniciado sesión recientemente se le mostrará una pantalla para iniciar sesión.
+3. (1) En caso de tener cuenta introduzca sus credenciales
+   (desde el resto de páginas se podrá acceder a "Iniciar sesión" pulsando el botón "Iniciar" de la esquina superior derecha)
+4. (2) Si todavía no tiene una cuenta en Clouset pulse el botón de registar
+5. Una vez se haya registrado o iniciado sesión, se le redirecciona a la página principal.
+6. Pulsando de nuevo "Mi armario", accederá al mismo, donde se le da la bienvanida y se mostrará su 'username'
+7. Pulse en Prendas para ver las prendas que tiene actualmente en su armario. Si no aparece ninguna es que aún no ha registrado una.
+   Es el momento de agregar una. Pulse "Añadir prenda".
+8. En el menu de añadir prenda rellene los campos según los valores de su prenda.
+   Pulse añadir para agregarla o volver para cerrar el menú.
+9. Pulse en Outfits para ver los outfits que tiene registrados en su armario.
+   Para agregar uno nuevo. Pulse "Añadir outfit".
+10. En el menu de añadir outfit rellene los campos según los valores de su outfit.
+    Agrege las prendas de su armario que componen sus outfit mediante un click o ctrl-click.
+11. Para consultar más datos sobre una prenda o un outfit pulse sobre el mismo, accederá a la pantalla de detalle
+12. En la pantalla de detalle, se le muestra la opción de borrar prenda. Que elimina el item y le redirecciona a su armario.
+13. Para añadir una valoración, deslice el "slider" y cuando se muestre la puntuación que desee, pulse valorar.
+
 ## Resumen
 
 En primer lugar la práctica ha consistido en el desarrollo de la aplicación Web Clouset
@@ -62,24 +84,3 @@ Se ha desarrolla lo siguiente:
 
 #### Anotaciones
 Para la arquitectura software del proyecto ha empleado el patron de diseño MVC
-
-# Manual de usuario
-Aquí se detalla el funcionamiento de la aplicación, que es principalmente la asociada a la segunda opción, "Mi armario"
-1. Pulse la opción de "Mi armario", situada en la parte superior de la pantalla
-2. Si usted no ha iniciado sesión recientemente se le mostrará una pantalla para iniciar sesión.
-3. (1) En caso de tener cuenta introduzca sus credenciales 
-   (desde el resto de páginas se podrá acceder a "Iniciar sesión" pulsando el botón "Iniciar" de la esquina superior derecha)
-4. (2) Si todavía no tiene una cuenta en Clouset pulse el botón de registar
-5. Una vez se haya registrado o iniciado sesión, se le redirecciona a la página principal.
-6. Pulsando de nuevo "Mi armario", accederá al mismo, donde se le da la bienvanida y se mostrará su 'username'
-7. Pulse en Prendas para ver las prendas que tiene actualmente en su armario. Si no aparece ninguna es que aún no ha registrado una. 
-   Es el momento de agregar una. Pulse "Añadir prenda". 
-8. En el menu de añadir prenda rellene los campos según los valores de su prenda. 
-   Pulse añadir para agregarla o volver para cerrar el menú.
-9. Pulse en Outfits para ver los outfits que tiene registrados en su armario.
-   Para agregar uno nuevo. Pulse "Añadir outfit".
-10. En el menu de añadir outfit rellene los campos según los valores de su outfit.
-   Agrege las prendas de su armario que componen sus outfit mediante un click o ctrl-click.
-11. Para consultar más datos sobre una prenda o un outfit pulse sobre el mismo, accederá a la pantalla de detalle
-12. En la pantalla de detalle, se le muestra la opción de borrar prenda. Que elimina el item y le redirecciona a su armario. 
-13. Para añadir una valoración, deslice el "slider" y cuando se muestre la puntuación que desee, pulse valorar.
