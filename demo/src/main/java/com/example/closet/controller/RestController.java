@@ -2,12 +2,10 @@ package com.example.closet.controller;
 
 
 import com.example.closet.config.JwtTokenUtil;
-import com.example.closet.model.JwtRequest;
-import com.example.closet.model.JwtResponse;
-import com.example.closet.model.RegisterRequest;
-import com.example.closet.model.Usuario;
+import com.example.closet.model.*;
 import com.example.closet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -62,7 +60,6 @@ public class RestController {
 
         return ResponseEntity.ok().body(new JwtResponse(token));
     }
-
 
     private void authenticate(String username, String password) throws Exception {
         try {

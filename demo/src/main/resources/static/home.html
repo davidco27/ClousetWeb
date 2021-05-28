@@ -38,18 +38,18 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Marcas</a>
+                        <a class="nav-link" href="marca1.html">Marcas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Foro de Usuarios(Próximamente)</a>
                     </li>
                 </ul>
-                <button class="btn btn-solido" onclick="localStorage.clear();document.location.href='login.html'" style="margin-right: 1%;" role="button"><strong>Salir</strong></button>
                 <a class="btn btn-solido" href="login.html" style="margin-right: 1%;" role="button"><strong>Iniciar</strong></a>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="¡Encuentralo ahora!" aria-label="Search">
                     <button class="btn btn-simple" type="submit">Buscar</button>
                 </form>
+                <button class="btn btn-solido" onclick="localStorage.clear();document.location.href='login.html'" style="margin-left: 1%;" role="button"><strong>Salir</strong></button>
             </div>
         </div>
     </nav>
@@ -62,10 +62,8 @@
     <div class="container" id="armario" style="background-color: #f8c6a7; width: 100%; margin-top: 3%; border-style: solid; border-width: 0.4em; border-radius: 1em; border-color:#7b360a;">
     </div>
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <button class="btn btn-solido" id="v-pills-home-tab" style="margin-top: 0.3%;" onclick="openPrendaForm()">Añadir prenda</button>
-        <button class="btn btn-solido" id="v-pills-profile-tab" style="margin-top: 0.3%;" onclick="openOutfitForm()">Añadir Outfit</button>
-        <button class="btn btn-solido" id="v-pills-messages-tab" style="margin-top: 0.3%;" onclick="borrarPrenda()">Borrar prenda</button>
-        <button class="btn btn-solido" id="v-pills-settings-tab" style="margin-top: 0.3%;" onclick="valorarPrenda()">Borrar Outfit</button>
+        <button class="btn btn-solido" id="v-pills-home-tab" style="margin-top: 0.3%; width: 80%; margin-left: 10%;" onclick="openPrendaForm()">Añadir prenda</button>
+        <button class="btn btn-solido" id="v-pills-profile-tab" style="margin-top: 0.3%; width: 80%; margin-left: 10%;" onclick="openOutfitForm()">Añadir Outfit</button>
     </div>
     <div class="form-popup" id="newPrendaForm">
         <form action="/action_page.php" class="form-container">
@@ -93,7 +91,7 @@
             </div>
             <label for="outfitName" style="color: #7b360a"><b>¡Dale un nombre a tu nuevo atuendo!</b></label>
             <input type="text" placeholder="Escribe el nombre de tu nuevo Outfit" id="outfitName" required>
-            <label for="choices" style="color: #7b360a"><b>Selecciona las prendas de tu Outfit</b></label>
+            <label style="color: #7b360a"><b>Selecciona las prendas de tu Outfit</b></label>
             <div id="eleccionPrendas"></div>
             <button type="submit" style="width: 80%; margin-left: 10%;" class="btn">Añadir</button>
             <button type="button" style="width: 60%; margin-left: 20%;" class="btn cancel" onclick="closeOutfitForm()">Volver</button>

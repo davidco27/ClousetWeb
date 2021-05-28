@@ -1,9 +1,10 @@
 var usuario = localStorage.getItem('username');
 
-if(usuario != null)
+if(usuario != null) {
     document.getElementById("nombreUsuario").innerHTML= "<em>" + usuario + "</em>";
-else
-    alert('No esta registrado');
+ } else {
+    document.location.href = 'login.html';
+ }
 
 tokenVerification();
 
@@ -41,7 +42,7 @@ function showPrendaInfo(response){
         var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html?prendaId=' + prenda.id + '\'">';
         var imagen = '<img src="images/IconNavbar.png" width="3%" height="3%" class="mr-3 align-self-center" alt="Sample Image">';
         var div2 = '<div class="media-body">';
-        var nombre = '<h5 class="mt-0"><strong>' + prenda.nombre + '</strong><small><i>   Añadida el ' + day + '/' + month + '/' + anio  + '</i></small></h5>';
+        var nombre = '<h5 class="mt-0"><strong>' + prenda.nombre + '</strong><small><i>   Añadido el ' + day + '/' + month + '/' + anio  + '</i></small></h5>';
         var valoracion = '<h7 class="mt-0"> Valoración: <u>' + prenda.valoracion + '</u> (' + prenda.nvaloraciones + ')</h7>';
         var end = '</div>';
         var hr = '<hr>';
@@ -86,7 +87,7 @@ function showOutfitInfo(response){
         var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html?outfitId=' + outfit.id + '\'">';
         var imagen = '<img src="images/IconNavbar.png" width="3%" height="3%" class="mr-3 align-self-center" alt="Sample Image">';
         var div2 = '<div class="media-body">';
-        var nombre = '<h5 class="mt-0"><strong>' + outfit.nombre + '</strong><small><i>   Añadida el ' + day + '/' + month + '/' + anio  + '</i></small></h5>';
+        var nombre = '<h5 class="mt-0"><strong>' + outfit.nombre + '</strong><small><i>   Añadido el ' + day + '/' + month + '/' + anio  + '</i></small></h5>';
         var valoracion = '<h7 class="mt-0"> Valoración: <u>' + outfit.valoracion + '</u> (' + outfit.nvaloraciones + ')</h7>';
         var end = '</div>';
         var hr = '<hr>';
@@ -97,51 +98,6 @@ function showOutfitInfo(response){
     document.getElementById("armario").innerHTML=html;
 }
 
-function borrarPrenda() {
-var id = localStorage.getItem('id');
-fetch('http://localhost:8080/miarmario/prendas/'+id,
-        {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-            }
-        })
-        .then(res => {
-            if (res.ok) {
-                return res.json();
-            } else {
-                throw res;
-            }
-        })
-        .then(r => {
-            document.location.href="home.html";
-        })
-        .catch(e => console.log(e));
-}
-
-function valorarPrenda(){
-    var id = localStorage.getItem('id');
-    fetch('http://localhost:8080/miarmario/prendas/'+id+'?valoracion=' + valoracion,
-            {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                }
-            })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                } else {
-                    throw res;
-                }
-            })
-            .then(r => {
-                document.location.href="home.html";
-            })
-            .catch(e => console.log(e));
-}
 function tokenVerification() {
 
     if (typeof localStorage.getItem('token') === 'undefined') {

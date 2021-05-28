@@ -1,32 +1,34 @@
 var usuario = localStorage.getItem('username');
-    var form = document.getElementById("newOutfitForm");
-    var valores=[];
-    var select;
-    var prendasUsuario;
-    getPrendas();
- function createSelect(prendas){
-  prendasUsuario=prendas;
+var form = document.getElementById("newOutfitForm");
+var valores=[];
+var select;
+var prendasUsuario;
+getPrendasFromOutfit();
+
+function createSelect(prendas){
+    prendasUsuario=prendas;
     prendas.forEach(r=>{
-    valores.push(r.nombre);
-    })
-         select = document.createElement("select");
+        valores.push(r.nombre);
+        })
+        select = document.createElement("select");
         select.name = "choices";
         select.id = "prendas"
         select.multiple =true;
-    for (const val of valores)
-        {
-            var option = document.createElement("option");
-            option.value = val;
-            option.text = val.charAt(0).toUpperCase() + val.slice(1);
-            select.appendChild(option);
-        }
+        for (const val of valores)
+            {
+                var option = document.createElement("option");
+                option.value = val;
+                option.text = val.charAt(0).toUpperCase() + val.slice(1);
+                select.appendChild(option);
+            }
 
       document.getElementById("eleccionPrendas").appendChild(select);
-    form.addEventListener("submit", function(e) {
-        e.preventDefault();
-        return validateForm();
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+        return validateFormOutfits();
     });}
-function validateForm() {
+
+function validateFormOutfits() {
     try {
          var selecciones =getSelectValues(select,prendasUsuario);
          var id_prendas = "";
@@ -65,7 +67,8 @@ function validateForm() {
     }
     return false;
 }
-function getPrendas() {
+
+function getPrendasFromOutfit() {
     fetch('http://localhost:8080/miarmario/prendas?userId=' + usuario,
         {
             method: 'GET',

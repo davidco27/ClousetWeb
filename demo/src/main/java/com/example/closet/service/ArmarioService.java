@@ -29,7 +29,7 @@ public class ArmarioService {
     }
     public  void deleteOutfit(String idOutfit) {
         //Devuelve la prenda del usuario especificado
-        armarioRepository.deletePrendaById(idOutfit);
+        armarioRepository.deleteOutfitById(idOutfit);
     }
     public  void valorarPrenda(String idPrenda,float valoracion) {
         //Devuelve la prenda del usuario especificado

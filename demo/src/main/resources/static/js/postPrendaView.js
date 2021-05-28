@@ -2,9 +2,10 @@ var usuario = localStorage.getItem('username');
     var form = document.getElementById("newPrendaForm");
     form.addEventListener("submit", function(e) {
         e.preventDefault();
-        return validateForm();
+        return validateFormPrendas();
     });
-function validateForm() {
+
+function validateFormPrendas() {
     try {
         var name = document.getElementById("prendaName").value;
         var marca = document.getElementById("marca").value;

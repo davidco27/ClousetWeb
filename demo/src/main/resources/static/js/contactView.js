@@ -24,7 +24,8 @@ function validateForm() {
             },
             body: JSON.stringify(data)
             })
-            .then(response => {if (response.ok) {document.location.href="index.html";} else {alert("Lo sentimos, pero el documento envíado no es válido");}})
+            .then(response => {
+                document.location.href="index.html";})
             .then(data => {
                 console.log(data);
             });

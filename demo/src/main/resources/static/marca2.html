@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="login.html">Mi armario</a>
+                        <a class="nav-link" aria-current="page" href="home.html">Mi armario</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">¿Quiénes somos?</a>
@@ -49,22 +49,23 @@
                     <input class="form-control me-2" type="search" placeholder="¡Encuentralo ahora!" aria-label="Search">
                     <button class="btn btn-simple" type="submit">Buscar</button>
                 </form>
+                <button class="btn btn-solido" onclick="localStorage.clear();document.location.href='login.html'" style="margin-left: 1%;" role="button"><strong>Salir</strong></button>
             </div>
         </div>
     </nav>
-    <h1 style="text-align: center;">New In</h1>
+    <h1 style="margin-top:3.5%; text-align:center; color: #f8c6a7;"><strong>New In</strong></h1>
     <div class="video" style="margin: auto; width: 50%; padding: 10px; text-align: center;">
-        <h2>NIKE</h2>
+        <h3 style="margin-top:1.5%; text-align:center; color: #f8c6a7;" id="marca1"><em>Nike</em></h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/BUvEEVq4woU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <div class="pages" style="display: flex; flex-direction: row-reverse; margin-right: 50px;">
+    <div class="pages" style="display: flex; flex-direction: row-reverse; margin-right: 45%;">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" style="color: black; background-color: #f8c6a7 !important;" href="marca1.html">Previous</a></li>                
                 <li class="page-item"><a class="page-link" style="color: black;	background-color: #f8c6a7 !important;" href="marca1.html">1</a></li>
                 <li class="page-item"><a class="page-link" style="color: black;	background-color: #f8c6a7 !important;" href="marca2.html">2</a></li>
                 <li class="page-item"><a class="page-link" style="color: black;	background-color: #f8c6a7 !important;" href="marca3.html">3</a></li>
-                <li class="page-item"><a class="page-link" style="color: black;	background-color: #f8c6a7 !important;" href="marca3.html">Next</a></li>
+                <li class="page-item"><a class="page-link " style="color: black;	background-color: #f8c6a7 !important;" href="marca3.html">Next</a></li>
             </ul>
         </nav>
     </div>

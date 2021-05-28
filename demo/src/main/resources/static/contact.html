@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="login.html">Mi armario</a>
+                        <a class="nav-link" aria-current="page" href="home.html">Mi armario</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">¿Quiénes somos?</a>
@@ -48,6 +48,7 @@
                     <input class="form-control me-2" type="search" placeholder="¡Encuentralo ahora!" aria-label="Search">
                     <button class="btn btn-simple" type="submit">Buscar</button>
                 </form>
+                <button class="btn btn-solido" onclick="localStorage.clear();document.location.href='login.html'" style="margin-left: 1%;" role="button"><strong>Salir</strong></button>
             </div>
         </div>
     </nav>
