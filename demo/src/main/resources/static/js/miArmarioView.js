@@ -38,7 +38,7 @@ function showPrendaInfo(response){
         var month = date.getMonth() + 1;
         var day = date.getDate();
 
-        var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html\'">';
+        var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html?prendaId=' + prenda.id + '\'">';
         var imagen = '<img src="images/IconNavbar.png" width="3%" height="3%" class="mr-3 align-self-center" alt="Sample Image">';
         var div2 = '<div class="media-body">';
         var nombre = '<h5 class="mt-0"><strong>' + prenda.nombre + '</strong><small><i>   Añadida el ' + day + '/' + month + '/' + anio  + '</i></small></h5>';
@@ -78,10 +78,15 @@ function getOutfits() {
 function showOutfitInfo(response){
     var html='';
     response.forEach(outfit => {
-        var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html\'">';
+        var date = new Date(outfit.fecha_creacion);
+        var anio = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+
+        var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html?outfitId=' + outfit.id + '\'">';
         var imagen = '<img src="images/IconNavbar.png" width="3%" height="3%" class="mr-3 align-self-center" alt="Sample Image">';
         var div2 = '<div class="media-body">';
-        var nombre = '<h5 class="mt-0"><strong>' + outfit.nombre + '</strong><small><i>   Añadida el ' + outfit.fecha_creacion  + '</i></small></h5>';
+        var nombre = '<h5 class="mt-0"><strong>' + outfit.nombre + '</strong><small><i>   Añadida el ' + day + '/' + month + '/' + anio  + '</i></small></h5>';
         var valoracion = '<h7 class="mt-0"> Valoración: <u>' + outfit.valoracion + '</u> (' + outfit.nvaloraciones + ')</h7>';
         var end = '</div>';
         var hr = '<hr>';
