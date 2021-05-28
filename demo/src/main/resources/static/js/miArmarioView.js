@@ -35,7 +35,7 @@ function showPrendaInfo(response){
     response.forEach(prenda => {
         var date = new Date(prenda.fecha_creacion);
         var anio = date.getFullYear();
-        var month = date.getMonth();
+        var month = date.getMonth() + 1;
         var day = date.getDate();
 
         var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html\'">';
