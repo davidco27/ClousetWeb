@@ -33,10 +33,15 @@ function getPrendas() {
 function showPrendaInfo(response){
     var html='';
     response.forEach(prenda => {
+        var date = new Date(prenda.fecha_creacion);
+        var anio = date.getFullYear();
+        var month = date.getMonth();
+        var day = date.getDate();
+
         var div = '<div class="media" style="position: relative; cursor: pointer;" onclick="window.location.href= \'detalle.html\'">';
         var imagen = '<img src="images/IconNavbar.png" width="3%" height="3%" class="mr-3 align-self-center" alt="Sample Image">';
         var div2 = '<div class="media-body">';
-        var nombre = '<h5 class="mt-0"><strong>' + prenda.nombre + '</strong><small><i>   Añadida el ' + prenda.fecha_creacion  + '</i></small></h5>';
+        var nombre = '<h5 class="mt-0"><strong>' + prenda.nombre + '</strong><small><i>   Añadida el ' + day + '/' + month + '/' + anio  + '</i></small></h5>';
         var valoracion = '<h7 class="mt-0"> Valoración: <u>' + prenda.valoracion + '</u> (' + prenda.nvaloraciones + ')</h7>';
         var end = '</div>';
         var hr = '<hr>';
