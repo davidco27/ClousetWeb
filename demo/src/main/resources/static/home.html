@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Clouset • Mi Armario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/infocontainers.css">
     <link rel="shortcut icon" href="images/Icon.png"/>
 </head>
 <body style="background-color: #c77949;" >
@@ -60,13 +60,53 @@
     </div>
     <div class="container" id="armario" style="background-color: #f8c6a7; width: 100%; margin-top: 3%; border-style: solid; border-width: 0.4em; border-radius: 1em; border-color:#7b360a;">
     </div>
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="btn btn-solido" id="v-pills-home-tab" style="margin-top: 0.3%;" onclick="openPrendaForm()">Añadir prenda</button>
+        <button class="btn btn-solido" id="v-pills-profile-tab" style="margin-top: 0.3%;" onclick="openOutfitForm()">Añadir Outfit</button>
+        <button class="btn btn-solido" id="v-pills-messages-tab" style="margin-top: 0.3%;" onclick="borrarPrenda()">Borrar prenda</button>
+        <button class="btn btn-solido" id="v-pills-settings-tab" style="margin-top: 0.3%;" onclick="valorarPrenda()">Borrar Outfit</button>
+    </div>
+    <div class="form-popup" id="newPrendaForm">
+        <form action="/action_page.php" class="form-container">
+            <div class="text-center">
+                <img src="images/ClousetWebLogo.png" width="5%" height="5%" alt="Sample Image">
+                <h1 style="text-align:center; color: #7b360a;"><strong>Añadir una nueva Prenda</strong></h1>
+            </div>
+            <label for="prendaName" style="color: #7b360a"><b>¡Dale un nombre a tu prenda!</b></label>
+            <input type="text" placeholder="Escribe el nombre de tu prenda" id="prendaName" required>
+            <label for="marca" style="color: #7b360a"><b>Marca de la prenda</b></label>
+            <input type="text" placeholder="¿De qué marca es tu prenda?" id="marca" required>
+            <label for="tipo" style="color: #7b360a"><b>Tipo de prenda</b></label>
+            <input type="text" placeholder="¿Qué tipo de prenda es?" id="tipo" required>
+            <label for="color" style="color: #7b360a"><b>Color de la prenda</b></label>
+            <input type="text" placeholder="¿De qué color dirías que es?" id="color" required>
+            <button type="submit" style="width: 80%; margin-left: 10%;" class="btn btn-solido">Añadir</button>
+            <button type="button" style="width: 60%; margin-left: 20%;" class="btn cancel" onclick="closePrendaForm()">Volver</button>
+        </form>
+    </div>
+    <div class="form-popup" id="newOutfitForm">
+        <form action="/action_page.php" class="form-container">
+            <div class="text-center">
+                <img src="images/ClousetWebLogo.png" width="5%" height="5%" alt="Sample Image">
+                <h1 style="text-align:center; color: #7b360a;"><strong>Añadir un nuevo Outfit</strong></h1>
+            </div>
+            <label for="outfitName" style="color: #7b360a"><b>¡Dale un nombre a tu nuevo atuendo!</b></label>
+            <input type="text" placeholder="Escribe el nombre de tu nuevo Outfit" id="outfitName" required>
+            <label for="choices" style="color: #7b360a"><b>Selecciona las prendas de tu Outfit</b></label>
+            <button type="submit" style="width: 80%; margin-left: 10%;" class="btn">Añadir</button>
+            <button type="button" style="width: 60%; margin-left: 20%;" class="btn cancel" onclick="closeOutfitForm()">Volver</button>
+        </form>
+    </div>
 </body>
 <footer>
-    <div class="container" style="margin-top: 5%">
+    <br>
+    <div class="container" style="margin-top: 5%; margin-bottom: 5%;">
         <p class="mb-0" style="color: #f8c6a7;">Diseñada por <b>el grupo @Clouset</b>. Para la difusión de las actividades desarrolladas por @ClousetWeb.</p>
         <p class="mb-0" style="color: #f8c6a7;">Version 0.1 desarrollada para la asignatura de Programación de Aplicaciones Telemáticas.</p>
     </div>
 </footer>
 <script src= "js/bootstrap.js"></script>
 <script src="js/miArmarioView.js"></script>
+<script src="js/postPrendaView.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </html>
