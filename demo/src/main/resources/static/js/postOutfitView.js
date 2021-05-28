@@ -31,8 +31,9 @@ function validateForm() {
          var selecciones =getSelectValues(select,prendasUsuario);
          var id_prendas = "";
          selecciones.forEach(prenda=>{
-         id_prendas+=prenda.id;
+         id_prendas+=prenda.id+",";
          })
+
         var name = document.getElementById("outfitName").value;
         var today = new Date();
         var id = Math.floor(Math.random() * 10000000);
