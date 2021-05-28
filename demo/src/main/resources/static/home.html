@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="shortcut icon" href="images/Icon.png"/>
-    <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
 </head>
 <body style="background-color: #c77949;" >
     <nav class="navbar navbar-expand-lg navbar-clouset">
@@ -39,12 +38,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="marca1.html">Marcas</a>
+                        <a class="nav-link" href="#">Marcas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Foro de Usuarios(Próximamente)</a>
                     </li>
                 </ul>
+                <button class="btn btn-solido" onclick="localStorage.clear();document.location.href='login.html'" style="margin-right: 1%;" role="button"><strong>Salir</strong></button>
                 <a class="btn btn-solido" href="login.html" style="margin-right: 1%;" role="button"><strong>Iniciar</strong></a>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="¡Encuentralo ahora!" aria-label="Search">
@@ -93,8 +93,8 @@
             </div>
             <label for="outfitName" style="color: #7b360a"><b>¡Dale un nombre a tu nuevo atuendo!</b></label>
             <input type="text" placeholder="Escribe el nombre de tu nuevo Outfit" id="outfitName" required>
-            <label for="test" style="color: #7b360a"><b>Selecciona las prendas de tu Outfit</b></label>
-            <input type="text" placeholder="Escribe los Ids de las prendas" id="test" required>
+            <label for="choices" style="color: #7b360a"><b>Selecciona las prendas de tu Outfit</b></label>
+            <div id="eleccionPrendas"></div>
             <button type="submit" style="width: 80%; margin-left: 10%;" class="btn">Añadir</button>
             <button type="button" style="width: 60%; margin-left: 20%;" class="btn cancel" onclick="closeOutfitForm()">Volver</button>
         </form>
@@ -110,12 +110,6 @@
 <script src= "js/bootstrap.js"></script>
 <script src="js/miArmarioView.js"></script>
 <script src="js/postPrendaView.js"></script>
+<script src="js/postOutfitView.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
-<script>
-    $(".chosen-select").chosen({
-      no_results_text: "Oops, nothing found!"
-    })
-</script>
 </html>

@@ -18,17 +18,18 @@ public interface ArmarioRepository extends CrudRepository<Prenda, String> {
 
     @Query("SELECT * FROM \"PRENDAS\" WHERE \"id\" = :idPrenda")
     Prenda getPrendaById(String idPrenda);
-
+    @Modifying
     @Query("DELETE FROM \"PRENDAS\" WHERE  \"id\" = :idPrenda")
-    Prenda deletePrendaById(String idPrenda);
+    void deletePrendaById(String idPrenda);
+    @Modifying
     @Query("DELETE FROM \"OUTFITS\" WHERE  \"id\" = :idOutfit")
-    Prenda deleteOutfitById(String idOutfit);
+    void deleteOutfitById(String idOutfit);
     @Modifying
     @Query("UPDATE \"PRENDAS\" SET \"valoracion\"= :valoracion,\"nvaloraciones\" = :nvaloraciones WHERE  \"id\" = :idPrenda")
-   void valorarPrendaById(float valoracion,int nvaloraciones);
+   void valorarPrendaById(float valoracion,int nvaloraciones, String idPrenda);
     @Modifying
-    @Query("UPDATE \"OUTFITS\" SET \"valoracion\"= :valoracion,\"nvaloraciones\" = :nvaloraciones WHERE  \"id\" = :idPrenda")
-    void valorarOutfitById(float valoracion,int nvaloraciones);
+    @Query("UPDATE \"OUTFITS\" SET \"valoracion\"= :valoracion,\"nvaloraciones\" = :nvaloraciones WHERE  \"id\" = :idOutfit")
+    void valorarOutfitById(float valoracion,int nvaloraciones, String idOutfit);
     /* FUTURO: esto es un mensaje del pasado para que incluyais la foto */
     @Modifying
     @Query("INSERT INTO \"PRENDAS\" values (:id,:color,:marca,:valoracion,:nValoraciones,:nombre_usuario,:tipo,:nombre,:fecha)")

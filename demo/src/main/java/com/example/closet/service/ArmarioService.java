@@ -36,14 +36,14 @@ public class ArmarioService {
         Prenda prenda=armarioRepository.getPrendaById(idPrenda);
         int valoraciones = prenda.getNvaloraciones();
         float valoracionNueva = ((prenda.getValoracion()* valoraciones)+ valoracion)/ (valoraciones+1);
-        armarioRepository.valorarPrendaById(valoracionNueva,valoraciones+1);
+        armarioRepository.valorarPrendaById(valoracionNueva,valoraciones+1,idPrenda);
     }
     public  void valorarOufit(String idOutfit,float valoracion) {
         //Devuelve la prenda del usuario especificado
         Outfit outfit=armarioRepository.getOutfitById(idOutfit);
         int valoraciones = outfit.getNvaloraciones();
         float valoracionNueva = ((outfit.getValoracion()* valoraciones)+ valoracion)/ (valoraciones+1);
-        armarioRepository.valorarOutfitById(valoracionNueva,valoraciones+1);
+        armarioRepository.valorarOutfitById(valoracionNueva,valoraciones+1,idOutfit);
     }
 
     public void postPrendaByUser(Prenda prenda) {
